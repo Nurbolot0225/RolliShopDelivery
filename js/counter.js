@@ -16,6 +16,8 @@ window.addEventListener('click', function(event) {
 
         if (parseInt(counter.innerText) > 1) {
             counter.innerText = --counter.innerText
+        } else if (event.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1) {
+            event.target.closest('.cart-item').remove() 
         }
     }
 })
