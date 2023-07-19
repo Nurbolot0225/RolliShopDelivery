@@ -1,6 +1,5 @@
 const cartWrapper = document.querySelector('.cart-wrapper')
 
-
 window.addEventListener('click', function(event) {
 
     if (event.target.hasAttribute('data-cart')) {
@@ -51,11 +50,12 @@ window.addEventListener('click', function(event) {
                         </div>
                     </div>
                 </div>`
-
-
+                
             cartWrapper.insertAdjacentHTML('beforeend', cartItemHtml)
         }
         
         card.querySelector('[data-counter]').innerText = '1'
+
+        toggleCartStatus()
     }
 })
